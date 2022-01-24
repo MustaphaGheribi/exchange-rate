@@ -1,0 +1,19 @@
+###spring.batch.job.enabled=false
+#spring
+#	.autoconfigure.exclude= \
+#	org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, \
+#	org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, \
+#	org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,  org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+
+
+exchange:
+  api:
+    base: "http://api.exchangeratesapi.io/v1"
+    latest: "/latest"
+    key: "1349a26e904de097c825e1820bbc3a73"
+
