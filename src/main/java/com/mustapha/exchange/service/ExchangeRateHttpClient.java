@@ -14,11 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-@EnableScheduling
 public class ExchangeRateHttpClient {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ExchangeRateHttpClient.class);
-
 
 	@Value("${exchange.api.base}")
 	private String baseURL;
@@ -45,7 +43,7 @@ public class ExchangeRateHttpClient {
 		headers.set("Accept", "application/json");
 		Map<String, String> vars = new HashMap<>();
 		vars.put("accessKey",accessKey);
-
+		vars.put("from","EUR");
 		try{
 			ExchangeRatesResponse rateConversionResponse = restTemplate.getForObject(baseURL + latest + "?access_key={accessKey}&base={from}", ExchangeRatesResponse.class, vars);
 			if(rateConversionResponse.isSuccess()) {
