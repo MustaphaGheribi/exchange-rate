@@ -4,8 +4,6 @@ import com.mustapha.exchange.rest.dto.exchangeRateAPI.ExchangeRatesResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -36,11 +34,9 @@ public class ExchangeRateHttpClient {
 		this.currencyRatesRepository = currencyRatesRepository;
 	}
 
-	@Scheduled(cron = "@hourly")
+	@Scheduled(cron="@hourly")
 	public void exchangeRates() {
 
-		HttpHeaders headers = new HttpHeaders();
-		headers.set("Accept", "application/json");
 		Map<String, String> vars = new HashMap<>();
 		vars.put("accessKey",accessKey);
 		vars.put("from","EUR");

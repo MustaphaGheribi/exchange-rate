@@ -3,13 +3,10 @@ com\mustapha\exchange\domain\AmountConversion.class
 com\mustapha\exchange\domain\CurrencyPair.class
 com\mustapha\exchange\rest\UpperCaseEditor.class
 com\mustapha\exchange\domain\ExchangeRate.class
-com\mustapha\exchange\domain\InteractiveExchangeRate.class
 com\mustapha\exchange\service\ExchangeRateService.class
-com\mustapha\exchange\batch\CurrencyWriter.class
 com\mustapha\exchange\rest\DoubleJsonSerializer.class
-com\mustapha\exchange\batch\FetchExchangeRatesJobConfiguration.class
-com\mustapha\exchange\batch\ZippedReader.class
 com\mustapha\exchange\rest\dto\ApiError.class
 com\mustapha\exchange\service\CurrencyRatesRepository.class
+com\mustapha\exchange\service\ExchangeRateHttpClient.class
 com\mustapha\exchange\Application.class
-com\mustapha\exchange\batch\FetchExchangeRatesJobScheduler.class
+com\mustapha\exchange\rest\dto\exchangeRateAPI\ExchangeRatesResponse.class
